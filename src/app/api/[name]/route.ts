@@ -1,4 +1,4 @@
-// DYMANIC SEGMENTS
+// DYNAMIC SEGMENTS
 // Here we want our name parameter to be dynamic
 // We will have two parameters for our function "request" & "params"
 // We have destructured "params" in parameters and assigned its type as "{params:{name:string}"

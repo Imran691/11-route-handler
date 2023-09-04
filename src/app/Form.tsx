@@ -38,7 +38,7 @@ const Form = () => {
         <div>
           <label>Email</label>
           <input
-          className="bg-slate-700"
+          className="bg-slate-700 ml-4"
             type="email"
             placeholder="Enter email"
             {...register("email")} //with spread operator we have added all the properties of register function - "register" function returns an object and has a unique parameter with each input filed and it checks vslidation errors and changes made.
@@ -47,7 +47,7 @@ const Form = () => {
         <div>
           <label>Password</label>
           <input
-            className="bg-slate-700"
+            className="bg-slate-700 mx-4"
             type="password"
             placeholder="Enter password"
             {...register("password", {required:true})}

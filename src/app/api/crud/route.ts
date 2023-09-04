@@ -1,5 +1,5 @@
 // Functions are named after the methods used to call APIs. In this way whichever method is used, same function is called accordingly.
-// for each end point we ceate CRUD system.
+// for each end point we cerate CRUD system.
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -16,13 +16,13 @@ export async function GET(request: NextRequest) {
 
 
 // clients send data in "request"
-// POST method is used to create data in data base.
+// POST method is used to create new data in data base.
 // to create data we need to send data. In postman we send data in request body, in "raw" in "json" format.
-// This data is recieved in "request" and we convert this data in json using "request.json" method.
+// This data is received in "request" and we convert this data in json using "request.json" method.
 
 export async function POST(request: NextRequest) {
   const req = await request.json();     // we use "await" because it is a promise.
-  if(req.name){         // If request body object contains "name" propoety
+  if(req.name){         // If request body object contains "name" property
     return NextResponse.json({
       To: req.name,        // to make this property dynamic
       Message: "All well here",
@@ -37,13 +37,13 @@ export async function POST(request: NextRequest) {
 // IN PUT and DELETE methods we need to use the ID of relevant data.
 
 //PUT is used to update data in data base e.g. uploading profile pic.
-// We send ID of the data to be uodated.
+// We send ID of the data to be updated.
 // We send body with PUT as well containing data that is to be updated.
 export async function PUT(request: NextRequest) {
   const req = await request.json();
   if(req.name){
     return NextResponse.json({
-      To: "Zia",
+      To: req.name,
       Message: "This is a updated greeting",
       RequestType: "PUT"
     });
